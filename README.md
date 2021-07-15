@@ -1,7 +1,7 @@
 # CRUD - Informática :file_folder:
 :bookmark_tabs: **Mostrando um pouco do CRUD de Informática do Grupo 8 com deploy no Azure**
 
-:bookmark_tabs: **Este conteúdo faz parte de um cronograma educacional, e foi uma tarefa solicitada para todos os alunos...**
+:heavy_exclamation_mark: **Este conteúdo faz parte de um cronograma educacional, e foi uma tarefa solicitada para todos os alunos...**
 
 ## Membros do Grupo 8 :beginner:
 
