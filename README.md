@@ -39,4 +39,8 @@
 ### 📍 **Roda o projeto**
 **sudo node index.js &**
 
+## **Imagem Demo do nosso projeto:**
 
+<p align="left">
+  <img height="200" width"200" src="demo.png">
+  </p>
