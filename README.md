@@ -3,7 +3,7 @@
 
 :bookmark_tabs: **Este conteúdo faz parte de um cronograma educacional, e foi uma tarefa solicitada para todos os alunos...**
 
-## Membros do Grupo 8
+## Membros do Grupo 8 :beginner:
 
 :boy: **- Lucas Alves Moreira**
 
