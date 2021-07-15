@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <title>Grupo 8 - CRUD</title>
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-olGYVEX6x6n5-agmPE2cMQXY0vjWwOllDg&usqp=CAU" type="image/png" sizes="16x16">
+  <link rel="stylesheet" href="style3.css">
+  <!--FontAwesome -->
+  <script src="https://kit.fontawesome.com/a3b28e8694.js" crossorigin="anonymous"></script>
+  <!--Bootstrap-->
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!-- Google fonts - Muli-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
+</head>
+
+<body>
+  <h1>Grupo 8 - Informática</h1>
+  <div class="search" style="border-style: solid;border-width: 2px;margin: 40px;padding: 10PX;  width: 1170PX; align-content: center; margin-left: 280px;">
+    <form id="form" enctype="multipart/form-data" action="http://crud-informatica.eastus.cloudapp.azure.com:3000/produtos/" method="POST" >
+      <div style="align-items: center;align-content: center;">
+        <label for="nome"><strong><i class="fas fa-file-signature"></i> Nome do Produto:</strong></label>
+        <input type="text" class="input-material" id="nome" name="nome" value="" placeholder="Entre com o nome">
+
+        <label for="precoVenda"><strong><i class="fas fa-dollar-sign"></i></i> Valor do Produto:</strong></label>
+        <input type="text" class="input-material" id="precoVenda" name="precoVenda" value="" placeholder="Entre com o preço">
+
+	<label for="descricao"><strong><i class="fas fa-file-medical"></i></i> Descrição do Produto:</strong></label>
+        <input type="text" class="input-material" id="descricao" name="descricao" value="" placeholder="Entre com a descrição">
+
+        <label for="imagem" class="imagem"><strong><i class="far fa-image"></i> Imagem do Produto</strong></label>
+	<input type="file"class="input-imagem" id="imagem_produto" name="imagem_produto" value="" accept="image/*" ">
+
+	<button id="cadastro" type="submit" class="btn btn-primary" formtarget="_blank"><i class="fas fa-user-plus"></i><strong> Inserir</strong></button>
+
+     
+        <label for="id" style="margin-left: 50px;width:160px; margin-top: 30px;";><strong>Pesquisa de Produto:</strong></label>
+        <input type="text" id="codProduto" name="codProduto" value="" style="width:40px;">
+        <button id="btn-pesq" type="button" class="btn btn-primary" onClick="listByID();"><i class="fas fa-search"></i></button>
+	
+	
+      </div>
+          </form>
+  </div>
+  <ul class="lista"> </ul>
+</body>
+
+<script>
+  var myList = document.querySelector('ul');
+  listByID(``); //No refresh
+  function listaProdutos(produtos) {
+    for (var i = 0; i < produtos.length; i++) {
+      var listItem = document.createElement('li');
+      listItem.innerHTML = `<label style="margin-left: 10px;"> <strong>Código do Produto:</strong> </label>`
+      listItem.innerHTML += `<input type="text" class="id" id="codProduto-${produtos[i].codProduto}" value="${produtos[i].codProduto}" style="width: 50px;margin-right: 30px; margin-bottom:10px;">`;
+      listItem.innerHTML += `<strong>Nome do Produto: <input type="text" class="nome" id="nome-${produtos[i].codProduto}" value="${produtos[i].nome}" style="margin-right: 30px;margin-bottom:10px;"></strong>`;
+      listItem.innerHTML += `<strong>Valor do Produto: <input type="text" class="precoVenda" id="precoVenda-${produtos[i].codProduto}" value="${produtos[i].precoVenda}" style="margin-right: 20px;"></strong>`;
+      listItem.innerHTML += `<strong>Descrição do produto:</strong> <input type="text" id="descricao-${produtos[i].codProduto}" value="${produtos[i].descricao}" style="padding-right: 20px; text-align: center;">`;
+      listItem.innerHTML += `<img src="${produtos[i].imagem_produto}" width="150"; style="margin-right:40px; border-radius: 50px; border-style: solid; margin-left: 40%;" >`;
+      listItem.innerHTML += `<button class="del" onclick="deleta(${produtos[i].codProduto});"><strong>Apagar</strong> <i class="fa fa-trash"></i></button>`;
+      listItem.innerHTML += `<button class="att" onclick="atualizar(${produtos[i].codProduto});"><strong>Atualizar</strong> <i class="fas fa-edit"></i></button>`;
+      myList.appendChild(listItem);
+    }
+  }
+  function listByID(codProduto) {
+    myList.innerHTML = ""
+    codProduto = document.getElementById(`codProduto`).value
+    fetch('http://crud-informatica.eastus.cloudapp.azure.com:3000/produtos/' + codProduto)
+      .then(function (response) {
+        console.log(response.json)
+        if (!response.ok) { throw new Error("HTTP error, status = " + response.status); }
+        return response.json();
+      })
+      .then((produtos) => listaProdutos(produtos))
+  }
+
+  function deleta(codProduto) {
+    fetch('http://crud-informatica.eastus.cloudapp.azure.com:3000/produtos/' + codProduto, {
+      method: 'DELETE'
+    });
+    //alert("Excluido com sucesso!")
+    window.location.reload();
+  }
+  function atualizar(codProduto) {
+    const nome = document.getElementById(`nome-${codProduto}`).value;
+    const precoVenda = document.getElementById(`precoVenda-${codProduto}`).value;
+    const descricao = document.getElementById(`descricao-${codProduto}`).value;
+    //const imagem_produto = document.getElementById("imagem_produto").files[0];
+    fetch('http://crud-informatica.eastus.cloudapp.azure.com:3000/produtos/' + codProduto, {
+      method: 'PATCH',
+      body: `{"nome": "${nome}", "precoVenda": "${precoVenda}", "descricao": "${descricao}" }`,
+      headers: { "Content-Type": "application/json" }
+    });
+    //alert("atualizado com sucesso!"); window.location.reload;
+  }
+  function inserir() {
+    const nome = document.getElementById("nome").value;
+    const precoVenda = document.getElementById("precoVenda").value;
+    const descricao = document.getElementById("descricao").value;
+    const imagem_produto = document.getElementById("imagem_produto").files[0];
+    fetch('http://crud-informatica.eastus.cloudapp.azure.com:3000/produtos/', {
+      method: 'POST',
+      body: `{"nome": "${nome}", "precoVenda": "${precoVenda}", "descricao": "${descricao}", "imagem_produto": "${imagem_produto}" }`,
+      headers: { "Content-Type": "multipart/form-data; boundary=something" }
+    });
+    //alert("Registro Inserido com sucesso!")
+    listByID(``);
+    window.location.reload();
+  }
+</script>
+
+</html>

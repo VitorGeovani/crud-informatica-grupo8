@@ -1,0 +1,118 @@
+html{
+  align-content: center;
+  justify-content: center;
+}
+
+body{
+  align-content: center;  
+  background: linear-gradient(110deg, #583bfd 60%, #4b4eff 60%);
+  //background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+}
+
+ul {
+  list-style-type: none;	
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+}
+
+li {
+  margin-bottom: 10px;
+  background-color: black;
+  font-size: 125%;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 10px;
+  padding-right: 50px;
+  color: white;
+  border-style: solid;
+  margin-right: 30px;
+}
+
+h1{
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-style: solid;
+}
+
+.del, .att, .precoVenda, .nome, .id{
+  text-align: center;
+  border: solid black;
+  border-radius: 5px;
+}
+
+.del, .att{
+	margin-left: 0%;
+}
+
+.search{
+  background-color: black;
+  color: white;
+  padding-right: 50px;
+}
+
+.id{
+  margin-left: 5px;
+}
+.del{
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: white;
+}
+.del:hover{
+  box-shadow: 0 5px #2d3035;
+  transform: translateY(4px);
+}
+.att{
+  background-color: green;
+  color: white;
+  margin-left: 10px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: white;
+}
+.att:hover{
+  box-shadow: 0 5px #2d3035;
+  transform: translateY(4px);
+}
+
+/*Visualização Inicial*/
+
+#btn-pesq{
+  margin-right: 10px;
+  border-style: solid;
+  border-color: white;
+}
+#cadastro{
+  margin-left: 60px;
+  border-style: solid;
+  border-color: white;
+}
+.nome-pt1{
+  margin-left: 10px;
+}
+#id{
+  margin-left: -30px;
+}
+#nome, #precoVenda, #descricao{
+  text-align: center;
+}
+.imagem{
+  margin-left: 0px;
+  
+}
+.input-imagem{
+  margin-right: -50px;
+}
+.lista{
+	margin-right: 0px;
+}
