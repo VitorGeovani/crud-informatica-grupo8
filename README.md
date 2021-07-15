@@ -7,15 +7,27 @@
 
 :boy: **- Lucas Alves Moreira**
 
-:boy: **- Lucas Galdino (https://github.com/LucasGaldinno)**
+<img align="center" alt="icon-js" height="20" width="20" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" style="max-width:100%;"> **GitHub - (https://github.com/LucasAlvesM)**
+
+:boy: **- Lucas Galdino**
+ 
+<img align="center" alt="icon-js" height="20" width="20" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" style="max-width:100%;"> **GitHub - (https://github.com/LucasGaldinno)**
 
 :boy: **- Maurício Alves Moreira**
 
-:boy: **- Vitor Geovani (https://github.com/VitorGeovani)**
+<img align="center" alt="icon-js" height="20" width="20" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" style="max-width:100%;"> **GitHub - (https://github.com/MauricioAlvesM)**
 
-:boy: **- Tiago Soares (https://github.com/Tiagogtr)**
+:boy: **- Vitor Geovani** 
 
-:boy: **- Ryan Marinho (https://github.com/ryandcmv)**
+<img align="center" alt="icon-js" height="20" width="20" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" style="max-width:100%;"> **GitHub - (https://github.com/VitorGeovani)**
+
+:boy: **- Tiago Soares** 
+
+<img align="center" alt="icon-js" height="20" width="20" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" style="max-width:100%;"> **GitHub - (https://github.com/Tiagogtr)**
+
+:boy: **- Ryan Marinho**
+
+<img align="center" alt="icon-js" height="20" width="20" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" style="max-width:100%;"> **GitHub - (https://github.com/ryandcmv)**
 
 ## :information_source: Especificações do Projeto:
 
