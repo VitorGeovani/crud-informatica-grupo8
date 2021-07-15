@@ -11,7 +11,7 @@
 
 :boy: **- Maurício Alves Moreira**
 
-:boy: **- Vitor Geovani**
+:boy: **- Vitor Geovani (https://github.com/VitorGeovani)**
 
 :boy: **- Tiago Soares (https://github.com/Tiagogtr)**
 
