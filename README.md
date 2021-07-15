@@ -42,5 +42,5 @@
 ## **Imagem Demo do nosso projeto:**
 
 <p align="left">
-  <img height="200" width"200" src="demo.png">
+  <img height="200" width"200" src="demo-crud.png">
   </p>
