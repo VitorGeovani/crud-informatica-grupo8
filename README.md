@@ -1,2 +1,40 @@
-# crud-informatica-grupo8
-Mostrando um pouco do CRUD de Informática do Grupo 8 com deploy no Azure
+# CRUD - Informática :file_folder:
+**Mostrando um pouco do CRUD de Informática do Grupo 8 com deploy no Azure**
+
+## Membros do Grupo 8
+
+:boy: **- Lucas Alves Moreira**
+
+:boy: **- Lucas Galdino (https://github.com/LucasGaldinno)**
+
+:boy: **- Maurício Alves Moreira**
+
+:boy: **- Vitor Geovani**
+
+:boy: **- Tiago Soares (https://github.com/Tiagogtr)**
+
+:boy: **- Ryan Marinho (https://github.com/ryandcmv)**
+
+## :information_source: Especificações do Projeto:
+
+**Neste projeto utilizamos o Node.js, MySQL e o Azure com o Debian 10 "Buster" para realizarmos um CRUD, dividindo as partes do trabalho em Front-End, Back-End, Banco de Dados e Máquina Virtual. A ideia deste CRUD é simularmos uma Loja de Informática, onde são registrados os produtos, que no nosso caso possuem, código, nome, valor e descrição do produto.**
+
+## 📌 Recursos usados neste projeto:
+
+<img align="center" alt="icon-js" height="30" width="40" src="icons/visual-studio-code-logo-svg-vector.svg" style="max-width:100%;"></img> **Visual Studio Code -  (https://code.visualstudio.com/Download)**
+
+<img align="center" alt="icon-js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" style="max-width:100%;"></img> **NodeJS - (https://nodejs.org/en/)**
+
+## :information_source: **Acesse nossa demo no Azure --> (http://crud-informatica.eastus.cloudapp.azure.com/origlistaaz.html)**
+
+## :information_source: **Comandos importantes:**
+### 📍 **Instala as dependências**
+**sudo npm install**
+
+### 📍 **Inicia um projeto**
+**sudo npm init**
+
+### 📍 **Roda o projeto**
+**sudo node index.js &**
+
+
